@@ -2,7 +2,7 @@ package org.j8unit.maven.plugin;
 
 import static org.j8unit.maven.plugin.util.Resources.asResourcePairs;
 import java.util.ListResourceBundle;
-import org.j8unit.maven.plugin.util.NameBasedCharSequence;
+import org.j8unit.maven.plugin.util.CharSequences.NameBasedCharSequence;
 import org.j8unit.maven.plugin.util.Resources.ResourcePair;
 
 /**
