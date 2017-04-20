@@ -12,6 +12,9 @@
   <version>1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
+  <name>J8Unit Maven Plug-Ins (Parent POM)</name>
+  <description>The Parent POM of the J8Unit Maven Plug-Ins.</description>
+
   <properties>
     <version.java>1.8</version.java>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

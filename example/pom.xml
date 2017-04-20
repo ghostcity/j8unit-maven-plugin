@@ -17,6 +17,9 @@
   <artifactId>plugin-example</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
+  <name>J8Unit Maven Plug-Ins (Examples)</name>
+  <description>The Example Usages of the J8Unit Maven Plug-Ins.</description>
+
   <dependencies>
     <dependency>
       <groupId>org.j8unit</groupId>

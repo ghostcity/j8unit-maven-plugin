@@ -8,12 +8,12 @@
   </prerequisites>
 
   <groupId>org.j8unit</groupId>
-  <artifactId>maven-plugin</artifactId>
+  <artifactId>maven</artifactId>
   <version>1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>J8Unit Maven Plug-In (Aggregation POM)</name>
-  <description>The Aggregation POM of the J8Unit Maven Plug-In.</description>
+  <name>J8Unit Maven Plug-Ins (Aggregation POM)</name>
+  <description>The Aggregation POM of the J8Unit Maven Plug-Ins.</description>
 
   <modules>
     <module>./parent</module>
