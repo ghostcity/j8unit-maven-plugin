@@ -1,4 +1,4 @@
-package org.j8unit.maven.plugin.plugin.api;
+package org.j8unit.maven.plugin.api;
 
 import static java.lang.String.format;
 import java.util.function.Supplier;

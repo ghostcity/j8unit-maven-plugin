@@ -1,4 +1,4 @@
-package org.j8unit.maven.plugin.plugin.api;
+package org.j8unit.maven.plugin.api;
 
 import static org.apache.maven.plugin.MojoExecution.Source.CLI;
 import static org.j8unit.maven.plugin.Messages.Keys.AVOIDABLE_EXCEPTION;

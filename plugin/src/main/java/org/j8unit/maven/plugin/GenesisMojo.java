@@ -27,9 +27,9 @@ import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
-import org.j8unit.maven.plugin.plugin.api.ComfortMojo;
-import org.j8unit.maven.plugin.plugin.api.CompileClasspathMojo;
-import org.j8unit.maven.plugin.plugin.api.LoggingMojo;
+import org.j8unit.maven.plugin.api.ComfortMojo;
+import org.j8unit.maven.plugin.api.CompileClasspathMojo;
+import org.j8unit.maven.plugin.api.LoggingMojo;
 
 @Mojo(name = "genesis", defaultPhase = GENERATE_TEST_SOURCES)
 public class GenesisMojo

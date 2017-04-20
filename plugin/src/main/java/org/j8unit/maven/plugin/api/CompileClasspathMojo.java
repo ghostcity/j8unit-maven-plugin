@@ -1,4 +1,4 @@
-package org.j8unit.maven.plugin.plugin.api;
+package org.j8unit.maven.plugin.api;
 
 import static java.lang.Thread.currentThread;
 import static java.util.Collections.singleton;
@@ -12,7 +12,7 @@ import static javax.tools.JavaFileObject.Kind.CLASS;
 import static javax.tools.StandardLocation.locationFor;
 import static javax.tools.ToolProvider.getSystemJavaCompiler;
 import static org.j8unit.maven.plugin.Messages.Keys.MISSING_COMPILER;
-import static org.j8unit.maven.plugin.plugin.api.J8UnitMojoFailureException.onDemandMojoFailure;
+import static org.j8unit.maven.plugin.api.J8UnitMojoFailureException.onDemandMojoFailure;
 import static org.j8unit.maven.plugin.util.CheckedFunction.doIt;
 import static org.j8unit.maven.plugin.util.Comparators.PACKAGE_COMPARATOR;
 import static org.j8unit.maven.plugin.util.Lists.map;
