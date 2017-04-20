@@ -33,6 +33,9 @@ import javax.tools.StandardJavaFileManager;
 import org.apache.maven.plugin.Mojo;
 import org.apache.maven.plugin.MojoFailureException;
 
+/**
+ * Extension of the {@link Mojo} interface providing default class-path features.
+ */
 public abstract interface CompileClasspathMojo
 extends Mojo {
 
