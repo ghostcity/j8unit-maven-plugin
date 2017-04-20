@@ -7,7 +7,7 @@ import java.util.function.Function;
 public enum Lists {
     ;
 
-    public static <T, R> List<R> map(final List<T> from, final Function<? super T, ? extends R> mapper) {
+    public static <T, R> List<R> map(final List<? extends T> from, final Function<? super T, ? extends R> mapper) {
         return from.stream().map(mapper).collect(toList());
     }
 
