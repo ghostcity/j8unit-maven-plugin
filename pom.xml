@@ -15,10 +15,26 @@
   <name>J8Unit Maven Plug-Ins (Aggregation POM)</name>
   <description>The Aggregation POM of the J8Unit Maven Plug-Ins.</description>
 
-  <modules>
-    <module>./parent</module>
-    <module>./plugin</module>
-    <module>./example</module>
-  </modules>
+  <profiles>
+    <profile>
+      <id>continuous-integration</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <modules>
+        <module>./parent</module>
+        <module>./plugin</module>
+        <module>./example</module>
+      </modules>
+    </profile>
+
+    <profile>
+      <id>ossrh</id>
+      <modules>
+        <module>./parent</module>
+        <module>./plugin</module>
+      </modules>
+    </profile>
+  </profiles>
 
 </project>
