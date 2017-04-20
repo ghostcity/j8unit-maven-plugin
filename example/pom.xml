@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <prerequisites>
+    <maven>3.0</maven>
+  </prerequisites>
+
+  <parent>
+    <groupId>org.j8unit</groupId>
+    <artifactId>plugin-parent</artifactId>
+    <version>1-SNAPSHOT</version>
+    <relativePath>../parent</relativePath>
+  </parent>
+
+  <artifactId>plugin-example</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <name>J8Unit Maven Plug-In (Examples)</name>
+  <description>The Example Usages of the J8Unit Maven Plug-In.</description>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.j8unit</groupId>
+      <artifactId>core</artifactId>
+      <version>4.12.2-SNAPSHOT</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.j8unit</groupId>
+        <artifactId>j8unit-maven-plugin</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <executions>
+          <execution>
+            <id>generate-test-sources</id>
+            <goals>
+              <goal>genesis</goal>
+            </goals>
+            <configuration>
+              <sourceDirectory>${project.build.directory}/generated-test-sources/j8unit</sourceDirectory>
+              <addSourceDirectory>true</addSourceDirectory>
+              <style>PACKAGE</style>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
