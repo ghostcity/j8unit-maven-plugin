@@ -4,6 +4,11 @@ import static java.lang.String.format;
 import org.apache.maven.plugin.Mojo;
 import org.apache.maven.plugin.logging.Log;
 
+/**
+ * Extension of the {@link Mojo} interface to allow immediate usage of the {@link Log} methods.
+ *
+ * In addition, each logging level method provides a {@link String#format(String, Object...)} based scenario.
+ */
 public abstract interface LoggingMojo
 extends Mojo, Log {
 
