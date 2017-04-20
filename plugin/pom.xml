@@ -18,8 +18,8 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
-  <name>J8Unit Maven Plug-Ins (Mojos)</name>
-  <description>The Mojo Implementations of the J8Unit Maven Plug-Ins.</description>
+  <name>J8Unit Maven Plug-In (Mojos)</name>
+  <description>The Mojo Implementations of the J8Unit Maven Plug-In.</description>
 
   <dependencies>
     <!-- maven-plugin-tools-api ??? -->

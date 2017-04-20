@@ -12,8 +12,8 @@
   <version>1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>J8Unit Maven Plug-Ins (Parent POM)</name>
-  <description>The Parent POM of the J8Unit Maven Plug-Ins.</description>
+  <name>J8Unit Maven Plug-In (Parent POM)</name>
+  <description>The Parent POM of the J8Unit Maven Plug-In.</description>
 
   <properties>
     <version.java>1.8</version.java>
