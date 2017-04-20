@@ -21,22 +21,26 @@ public enum Resources {
 
     }
 
-    public static <E extends Enum<E> & ResourcePair> Object[][] asResourcePairs(final Class<E> clazz) {
+    public static final <E extends Enum<E> & ResourcePair> Object[][] asResourcePairs(final Class<? extends E> clazz) {
         return stream(clazz.getEnumConstants()).map(c -> c.asResourcePair()).toArray(Object[][]::new);
     }
 
-    public static Path resolveResource(final Object reference, final String name)
+    private static final String MISSING_RESOURCE = "Cannot find resource for %s via %s.";
+
+    private static final String UNLOADABLE_RESOURCE = "Cannot load resource for %s via %s.";
+
+    public static final Path resolveResource(final Object reference, final String name)
     throws MissingResourceException {
         final Class<?> base = reference.getClass();
         final URI uri;
         try {
             uri = base.getResource(name).toURI();
         } catch (final NullPointerException missingResource) {
-            final MissingResourceException miss = new MissingResourceException(format("Cannot find resource for %s via %s.", name, base), name, "");
+            final MissingResourceException miss = new MissingResourceException(format(MISSING_RESOURCE, name, base), name, "");
             miss.initCause(missingResource);
             throw miss;
         } catch (final URISyntaxException malformedURL) {
-            final MissingResourceException miss = new MissingResourceException(format("Cannot load resource for %s via %s.", name, base), name, "");
+            final MissingResourceException miss = new MissingResourceException(format(UNLOADABLE_RESOURCE, name, base), name, "");
             miss.initCause(malformedURL);
             throw miss;
         }
@@ -47,7 +51,7 @@ public enum Resources {
                 return newFileSystem(uri, emptyMap()).provider().getPath(uri);
             } catch (final IOException uncreatableFileSystem) {
                 uncreatableFileSystem.addSuppressed(jarFileOrSimilar);
-                final MissingResourceException miss = new MissingResourceException(format("Cannot load resource for %s via %s.", name, base), name, "");
+                final MissingResourceException miss = new MissingResourceException(format(UNLOADABLE_RESOURCE, name, base), name, "");
                 miss.initCause(uncreatableFileSystem);
                 throw miss;
             }
