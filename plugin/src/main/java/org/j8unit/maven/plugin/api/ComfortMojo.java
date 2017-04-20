@@ -11,7 +11,7 @@ import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
 
 /**
- * Comfort extension of the {@link Mojo} API ({@link #execute()}.
+ * Comfort extension of the {@link Mojo} API (see {@link #execute()}.
  */
 public abstract interface ComfortMojo
 extends Mojo, LoggingMojo {
